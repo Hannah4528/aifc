@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SUMMER SCHOOL</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ionicons -->
+    <link href="css/ionicons.min.css" rel="stylesheet">
+    <link href="css/linear-icon.css" rel="stylesheet">
+    <!-- Owl-carousel -->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <!-- Magnific popup style sheet -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Dolphin style sheet -->
+    <link rel="stylesheet" href="css/weblysleek-ui-fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700,900" rel="stylesheet">
+
+    <style>
+        /*--------------------
+        Color Scheme =======*/
+
+        p,li{
+        font-family: 'Dosis', sans-serif !important;
+        }
+
+        input[type='submit'], .nav li.current a, .speaker-contacts > .contact:hover, 
+        .social-icons li a:hover, .form-notification, .table-price, .gotop:hover, 
+        .preloader div, .owl-btn.prev:hover, .owl-btn.next:hover,
+        .flex-control-paging li a.flex-active, .flex-control-paging li a.flex-active:hover, 
+        .owl-page.active span, .owl-page.active span:hover,
+        .preloader, .preloader:before, .preloader:after, div.fancy-select div.trigger.open,
+        div.fancy-select ul.options li.selected, div.fancy-select ul.options li.selected.hover  {
+        background-color: none;
+        color: black;
+        }
+
+        a, .accordion-heading span, .speaker-contacts > .contact, 
+        .table-features li.fa-check-circle, .owl-btn.prev,
+        .owl-btn.next, div.fancy-select ul.options li.hover {
+        color: #C83A66; }
+
+        .speaker:hover .speaker-photo, .speaker-contacts > .contact, 
+        .social-icons li a:hover, .gotop:hover, .speaker-contacts > .contact:hover {
+        border-color: rgba(79, 218, 224, 0.47); 
+        }
+        h2.heading{
+        font-family: 'Roboto', sans-serif;    
+        color: black;
+        }
+
+        hr{
+            background: white !important;
+        }
+        .title-start{
+            margin-top: -40px;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 40px;
+        }
+
+        .title-start h2 {
+            text-align: center;
+            color: #000000 ;
+            font-size: 38px;
+        }
+
+
+
+        /*--------------------
+        Reset ==============*/
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,hr,th,td {
+        margin:0; 
+        padding:0;
+        }
+
+
+
+        /*--------------------
+        General ============*/
+        p.sub-text.text-center {
+        font-size: 20px;
+        }
+        p.text-right {
+        font-weight: bold;
+        color: rgba(166, 53, 53, 0.42);
+        }
+
+        body {
+        -webkit-font-smoothing: antialiased;
+        }
+
+        a, a:hover, a:active, a:focus {
+        outline: 0;
+        text-decoration: none;
+        }
+
+        a {
+            text-decoration:none;
+        }
+
+        a:hover {
+        color: #bbbac0;
+            text-decoration:none;
+        }
+
+        p {
+            font-size: 1.6rem;
+        line-height: 1.6em;
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        h1,h2,h3 {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.4em;
+            color: #222222;
+            margin: 10px 0;
+        }
+
+        h4,h5 {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.5em;
+        color: #555555;
+        margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 5.5rem;
+        }
+
+        h2 {
+            font-size: 3.4rem;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+        }
+
+        h4 {
+            font-size: 1.8rem;
+        }
+
+        h5 {
+            font-size: 1.6rem;
+        }
+
+        blockquote {
+        font-size: 1.6rem;
+        line-height: 1.6em;
+        border-left: 3px solid #efefef;
+        padding: 1rem 0 1rem 1rem;
+        margin: 1rem 0;
+        }
+
+        ul,ol {
+        font-size: 1.6rem;
+        line-height: 1.6em;
+        padding: 0 0 0 2rem;
+        margin: 1rem 0;
+        }
+
+        ul {
+        list-style-image: url(../images/ul.png);
+        }
+
+        hr {
+        height: 2px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            background: #efefef;
+        }
+
+        input,
+        textarea,
+        select {
+        width: 100%;
+        height: 6rem;
+        margin-bottom: 15px;
+        padding: 1rem 1.5rem;
+        border: none;
+        background: #ffffff;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        color: #555555;
+        }
+
+        select {
+            cursor: pointer;
+            line-height: 5.6rem;
+            padding: 1.7rem 1.5rem;
+        }
+
+        input[type='submit'] {
+        height: 6rem;
+        font-size: 2.5rem;
+        color: #ffffff;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+        transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+        -o-transition: all 0.1s; 
+        }
+
+        input[type='submit']:hover {
+        opacity: 0.9;
+        }
+
+        input[type='submit']:active {
+        border-bottom: 1px solid #b85146;
+        }
+
+        .box {
+        
+        border-radius: 5px;
+        padding: 0 45px;
+        }
+
+        #header {
+        position: relative;
+        margin-bottom: -100px;
+        overflow: hidden;
+        }
+
+        .header-panel {
+        position: absolute;
+        width: 100%;
+        min-height: 100px;
+        top: 0;
+        margin-top: 50px;
+        z-index: 55;
+        }
+
+        .header-menu {
+        position: absolute;
+            width: 100%;
+            z-index: 55;
+        }
+
+        .header-menu.sticky {
+        position: fixed;
+        margin: 0;
+        -moz-animation: bounceInDown 0.5s;
+        -webkit-animation: bounceInDown 0.5s;
+        animation: bounceInDown 0.5s;
+        }
+
+        .header-menu.fixed {
+        -moz-animation: bounceIn 0.5s;
+        -webkit-animation: bounceIn 0.5s;
+        animation: bounceIn 0.5s;
+        }
+
+        .header-menu > .box {
+        background: #C5EFF7;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
+
+        .header-menu.sticky > .box {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom: 1px solid #efefef;
+        }
+
+        header{
+        background: url(../images/demo/bg-slide-02.jpg);
+        background-size: cover;
+        }
+        .header-bg {
+        position: relative;
+        height: 750px;
+        overflow: hidden;
+        }
+
+        .header-bg:before {
+        top: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: url(../images/bg.png) repeat;
+        z-index: 40;
+        }
+
+        .content {
+        margin-top: 60px;
+        position: relative;
+        padding: 0 15px;
+        z-index: 50;
+        }
+
+        .content section {
+        padding: 50px 0;
+        }
+
+        .content section#features:first-child {
+        padding: 40px 0;
+        }
+
+        .content section + section:before {
+        display: block;
+        margin: -50px 15px 50px;
+        content: "";
+        height: 2px;
+        background: #efefef;
+        }
+
+        .content section.separated:before {
+        display: none;
+        }
+
+        .content section.separated { 
+        border-top: 20px solid #efefef;
+        border-bottom: 20px solid #efefef;
+        margin: 0 -45px -3px;
+        padding: 50px 30px;
+        }
+
+        .section-header {
+        margin-bottom: 45px;
+        }
+
+        .section-header h2,
+        .section-header h4 {
+        margin: 0;
+        }
+        /* ---------
+        * Timeline
+        * --------------------------------------------- */
+
+        em.timeline-item {
+        text-indent: 3px;
+        width: 100%;
+        margin-bottom: 1px;
+        display: flex;
+        border-bottom: 1px solid rgba(24, 161, 146, 0.56);
+        }
+        .timeline-desc{
+        background: #E4F1FE;
+        height: 172px;
+        }
+        .timeline-other {
+            background: rgb(197, 239, 247);
+            height: 172px;
+        }
+        .timeline {
+        top: 35px;
+        list-style: none;
+        padding: 10px 0;
+        position: relative;
+        margin-bottom: -32px;
+        font-weight: 300;
+        }
+
+        .timeline > li {
+            margin-bottom: 20px;
+            position: relative;
+            width: 50%;
+            float: left;
+            clear: left;
+        }
+        .timeline > li:before, .timeline > li:after {
+            content:" ";
+            display: table;
+        }
+        .timeline > li:after {
+            clear: both;
+        }
+        .timeline > li:before, .timeline > li:after {
+            content:" ";
+            display: table;
+        }
+        .timeline > li:after {
+            clear: both;
+        }
+        .timeline > li > .timeline-panel {
+            width: calc(100% - 25px);
+            width: -moz-calc(100% - 25px);
+            width: -webkit-calc(100% - 25px);
+            float: left;
+            border: 1px solid #dcdcdc;
+            background: #ffffff;
+            position: relative;
+        }
+        .timeline > li > .timeline-panel:before {
+            position: absolute;
+            top: 26px;
+            right: -15px;
+            display: inline-block;
+            border-top: 15px solid transparent;
+            border-left: 15px solid #dcdcdc;
+            border-right: 0 solid #dcdcdc;
+            border-bottom: 15px solid transparent;
+            content:" ";
+        }
+        .timeline > li > .timeline-panel:after {
+            position: absolute;
+            top: 27px;
+            right: -14px;
+            display: inline-block;
+            border-top: 14px solid transparent;
+            border-left: 14px solid #ffffff;
+            border-right: 0 solid #ffffff;
+            border-bottom: 14px solid transparent;
+            content:" ";
+        }
+        .timeline > li > .timeline-badge {
+            color: #ffffff;
+            width: 24px;
+            height: 24px;
+            line-height: 50px;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            right: -12px;
+            z-index: 100;
+        }
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+        }
+        .timeline > li.timeline-inverted > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+        .timeline > li.timeline-inverted > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+        .timeline-badge > a {
+            color: #ffffff !important;
+        }
+        .timeline-badge a:hover {
+            color: #dcdcdc !important;
+        }
+        .timeline-title {
+            margin-top: 0;
+            color: inherit;
+        }
+        .timeline-heading h4 {
+        font-weight: 400;
+        padding: 10px 16px 11px;
+        font-size: 21px;
+        text-align: center;
+        background: rgba(197, 239, 247, 1);
+        }
+        i.fa.fa-check-square-o {
+        position: relative;
+        top: 6px;
+        right: 4px;
+        font-size: 18px;
+        }
+
+        .timeline-body > p, .timeline-body > ul {
+        padding: 10px 15px;
+        margin-bottom: 0;
+        color: rgb(0, 0, 0);
+        }
+        h2.testimonial-heading{
+            color: white !important;
+
+        }
+
+        i.fa.fa-quote-left {
+        font-size: 30px;
+        }
+        i.fa.fa-quote-right {
+        font-size: 30px;
+        position: relative;
+        top: 8px;
+        }
+
+        h2.text-center {
+        position: relative;
+        top: -15px;
+        background: aliceblue;
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 15px;
+        font-size: 25px;
+        font-style: italic;
+        }
+        .timeline-footer {
+        height: 10px;
+        width: 100%;
+        padding: 0px 15px;
+        background-color: rgba(152, 57, 57, 0.39);
+        font-weight: bold;
+        color: white;
+        }
+        .timeline-footer p { margin-bottom: 0; }
+        .timeline-footer > a {
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .timeline > li.timeline-inverted {
+            float: right;
+            clear: right;
+        }
+        .timeline > li:nth-child(2) {
+            margin-top: 60px;
+        }
+        .timeline > li.timeline-inverted > .timeline-badge {
+            left: -12px;
+        }
+        .no-float {
+            float: none !important;
+        }
+        @media (max-width: 767px) {
+            ul.timeline:before {
+                left: 40px;
+            }
+            ul.timeline > li {
+                margin-bottom: 0px;
+                position: relative;
+                width:100%;
+                float: left;
+                clear: left;
+            }
+            ul.timeline > li > .timeline-panel {
+                width: calc(100% - 65px);
+                width: -moz-calc(100% - 65px);
+                width: -webkit-calc(100% - 65px);
+            }
+            ul.timeline > li > .timeline-badge {
+                left: 28px;
+                margin-left: 0;
+                top: 16px;
+            }
+            ul.timeline > li > .timeline-panel {
+                float: right;
+            }
+            ul.timeline > li > .timeline-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+            ul.timeline > li > .timeline-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+            .timeline > li.timeline-inverted {
+                float: left;
+                clear: left;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            .timeline > li.timeline-inverted > .timeline-badge {
+                left: 28px;
+            }
+        }
+        li{
+        list-style: none;
+        }
+
+        .schedule-menu{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" style="display: flex; align-items: center;">
+            <img src="images/Logo.png" alt="Logo" class="logo">
+            <span class="text--bold" style="white-space: nowrap;">上海交通大学: AI赋能数学教育创新培养</span>
+        </a>
+    </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html#home">首页 </a></li>
+            <li><a href="registration.html">报名信息</a></li>
+            <li class="active"><a href="schedual.html">课程安排 <span class="sr-only">(current)</span></a></li>
+            <li><a href="index.html#contact">联系我们</a></li>
+        </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+    
+    <!--== Schedule ===================-->
+    <!--===============================-->
+    <section id="schedule" class="row">
+        <div class="container">
+            <div class="row">
+                <div class="title-start schedule-menu col-md-4 col-md-offset-4">
+                <br />
+                    <h2 style="margin-top: 100px;">课程时间表</h2>
+                    <p class="sub-text text-center">Check out the course details</p>
+                </div>
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-badge">
+                                <a><i class="fa fa-circle" id=""></i></a>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>7月21日</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="timeline-desc col-md-6">AI治理与全球视角：由巴黎第九大学Éric BROUSSEAU教授带来关于人工智能治理的深入探讨。<br>机器学习前沿应用：上海交大张耀宇教授带领学员了解机器学习的最新技术及实际应用。</p>
+                                    <p class="timeline-other col-md-6">
+                                        
+                                        <em class="timeline-item">
+                                            8:00-8:30  签到
+                                        </em> 
+                                        <em class="timeline-item">
+                                            8:30-9:00  开班典礼 合影
+                                        </em>
+                                        <em class="timeline-item">
+                                            9:00-10:30  AI治理(英文授课)
+                                        </em>
+                                        <em class="timeline-item">
+                                            14:00-15:30  机器学习前沿应用
+                                        </em>
+                                        <em class="timeline-item">
+                                            16:00-18:00  选题与小组组建
+                                        </em>
+
+                                    </p>
+
+                                </div>
+                                
+                            </div>
+                        </li>
+                        
+                        <li  class="timeline-inverted">
+                            <div class="timeline-badge">
+                                <a><i class="fa fa-circle" id=""></i></a>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>7月22日</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="timeline-desc col-md-6">机器学习与数学：巴黎萨克雷大学任振杰教授讲解机器学习中概率理论的数学基础。<br>AI伦理与责任：巴黎高等电子学院Emmanuel R. Goffi教授带领学生从伦理角度解析AI的社会影响。</p>
+                                    <p class="timeline-other col-md-6">
+                                        
+                                        <em class="timeline-item">
+                                            9:00-10:30  机器学习与数学
+                                        </em> 
+                                        <em class="timeline-item">
+                                            10:45-12:15  AI治理(英文授课)
+                                        </em>
+                                        <em class="timeline-item">
+                                            中午(午餐)  校内就餐
+                                        </em>
+                                        <em class="timeline-item">
+                                            14:00-15:30  机器学习前沿应用
+                                        </em>
+                                        <em class="timeline-item">
+                                            16:00-18:00  项目讨论
+                                        </em>
+
+                                    </p>
+
+                                </div>
+                                
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="timeline-badge">
+                                <a><i class="fa fa-circle" id=""></i></a>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>7月23日</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="timeline-desc col-md-6">概率与机器学习：上海交大梁经纬教授深入分析概率理论在机器学习模型中的应用，帮助学员理解数学与AI的深层联系。<br>前沿技术交流：由张耀宇教授指导学员在小组项目讨论。</p>
+                                    <p class="timeline-other col-md-6">
+                                        
+                                        <em class="timeline-item">
+                                            9:00-10:30  机器学习与数学
+                                        </em> 
+                                        <em class="timeline-item">
+                                            10:45-12:15  AI治理(英文授课)
+                                        </em>
+                                        <em class="timeline-item">
+                                            中午(午餐)  校内就餐
+                                        </em>
+                                        <em class="timeline-item">
+                                            4:00-15:30  机器学习前沿应用
+                                        </em>
+                                        <em class="timeline-item">
+                                            16:00-18:00  项目讨论
+                                        </em>
+
+                                    </p>
+
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge">
+                                <a><i class="fa fa-circle" id=""></i></a>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>7月24日</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="timeline-desc col-md-6">AI FOR SCIENCE：上海交大丁乔乔教授展示AI在自然科学中的跨学科应用。<br>AI创新与创业：途深智合副总裁于亚澎带来创业实践经验，介绍AI产品从研发到市场的全流程。</p>
+                                    <p class="timeline-other col-md-6">
+                                        
+                                        <em class="timeline-item">
+                                            9:00-10:30  AI FOR SCIENCE
+                                        </em> 
+                                        <em class="timeline-item">
+                                            10:45-12:15  AI创业
+                                        </em>
+                                        <em class="timeline-item">
+                                            中午(午餐)  校内就餐
+                                        </em>
+                                        <em class="timeline-item">
+                                            4:00-15:30  机器学习前沿应用
+                                        </em>
+                                        <em class="timeline-item">
+                                            16:00-18:00  实验室参访
+                                        </em>
+
+                                    </p>
+
+                                </div>
+                        
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="timeline-badge">
+                                <a><i class="fa fa-circle" id=""></i></a>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>7月25日</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="timeline-desc col-md-6">AI FOR SCIENCE：吴昊教授继续讲解AI在科学中的深度应用，带领学员理解如何利用AI推动科学研究。<br>项目交流与合作：学员在张耀宇教授指导下讨论项目进展，培养团队协作与创新思维。</p>
+                                    <p class="timeline-other col-md-6">
+                                        
+                                        <em class="timeline-item">
+                                            9:00-10:30  AI FOR SCIENCE
+                                        </em> 
+                                        <em class="timeline-item">
+                                            10:45-12:15  AI创业
+                                        </em>
+                                        <em class="timeline-item">
+                                            中午(午餐)  校内就餐
+                                        </em>
+                                        <em class="timeline-item">
+                                            4:00-15:30  机器学习前沿应用
+                                        </em>
+                                        <em class="timeline-item">
+                                            16:00-18:00  项目讨论
+                                        </em>
+
+                                    </p>
+
+                                </div>
+                                
+                            </div>
+                        </li>
+                        
+                        <li  class="timeline-inverted">
+                            <div class="timeline-badge">
+                                <a><i class="fa fa-circle" id=""></i></a>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>7月26日</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="timeline-desc col-md-6">跨领域AI应用：王宇光教授介绍AI在不同学科的应用实例，帮助学员理解AI的跨学科潜力。<br>小组项目深化：齐鹏教授指导下的项目讨论，确保学员能够进一步完善项目内容。</p>
+                                    <p class="timeline-other col-md-6">
+                                        
+                                        <em class="timeline-item">
+                                            9:00-10:30  AI FOR SCIENCE
+                                        </em> 
+                                        <em class="timeline-item">
+                                            10:45-12:15  AI创业
+                                        </em>
+                                        <em class="timeline-item">
+                                            中午(午餐)  校内就餐
+                                        </em>
+                                        <em class="timeline-item">
+                                            4:00-15:30  机器学习前沿应用
+                                        </em>
+                                        <em class="timeline-item">
+                                            16:00-18:00  项目讨论
+                                        </em>
+
+                                    </p>
+
+                                </div>
+                                
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="timeline-badge">
+                                <a><i class="fa fa-circle" id=""></i></a>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>7月27日</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="timeline-desc col-md-6">企业参访与实地体验：通过参观企业，学员直观了解AI技术在行业中的实际应用。<br>DEMO DAY：各小组展示项目成果，分享学习收获，展现创新思维与团队协作。</p>
+                                    <p class="timeline-other col-md-6">
+                                        
+                                        <em class="timeline-item">
+                                            9:00-10:30  公司参访
+                                        </em> 
+                                        <em class="timeline-item">
+                                            10:45-12:15  公司参访
+                                        </em>
+                                        <em class="timeline-item">
+                                            中午  午餐&返程
+                                        </em>
+                                        <em class="timeline-item">
+                                            4:00-15:30  DEMO DAY(展示)
+                                        </em>
+                                        <em class="timeline-item">
+                                            16:00-18:00  DEMO DAY(展示)
+                                        </em>
+
+                                    </p>
+
+                                </div>
+                                
+                            </div>
+                        </li>
+                        <li class="clearfix no-float"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="section footer-top" style="margin-top: 80px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="list-item-header">
+                  联系我们
+                </div>
+                <div class="contact-details">
+                  <div class="media">
+                    <div class="media-left contact-media-left">
+                      <p>地址</p>
+                    </div>
+                    <div class="media-body">
+                      <p>上海市闵行区东川路800号 上海交通大学理科楼5号楼309室</p>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left contact-media-left">
+                      <p>电话</p>
+                    </div>
+                    <div class="media-body">
+                      <p>021-54742994, 15021839465（张老师）</p>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left contact-media-left">
+                      <p>邮箱</p>
+                    </div>
+                    <div class="media-body">
+                      <p>sjtu1839465@sjtu.edu.cn</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="list-item-header">
+                  支持单位
+                </div>
+                <div>
+                  <p>上海交通大学自然科学研究院</p>
+                  <p>中法人工智能协会（Association d'Intelligence Artificielle France-Chine, AIFC）</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="footer-bottom">
+          <div class="container">
+            <hr class="footer-devider">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="copyright">版权所有 © 2025 上海交通大学.保留所有权利.</p>
+              </div>
+              <div class="col-md-6">
+                <ul class="footer-menu list-inline float-right">
+                  <li class="list-inline-item"><a href="#">使用条款</a></li>
+                  <li class="list-inline-item"><a href="#">隐私政策</a></li>
+                  <li class="list-inline-item"><a href="#">Cookie政策</a></li>
+                  <li class="list-inline-item"><a href="#">联系我们</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>                
+      
+      
+      <!-- PRELOADER -->
+      <div class="preloader-body">
+        <div class="cube-wrapper">
+          <div class="cube-folding">
+            <span class="leaf1"></span>
+            <span class="leaf2"></span>
+            <span class="leaf3"></span>
+            <span class="leaf4"></span>
+          </div>
+          <span class="loading" data-name="Loading">Loading</span>
+        </div>
+      </div>
+  
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="js/jquery-3.1.0.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- Owl-carousel JS -->
+      <script src="js/owl.carousel.js"></script>
+      <!-- Dolphin JS -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <!-- Dolphin JS -->
+      <script src="js/main.js"></script>
+</body>
+</html>
